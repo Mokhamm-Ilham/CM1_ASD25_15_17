@@ -52,8 +52,12 @@ public class Demo {
         if (posisi == -1) {
           System.out.println("Data tidak ditemukan");
         } else {
+          int cnt = sc.count;
           System.out.println("Kode Transaksi\tNama Pembeli\tTanggal Pembelian\tNama Barang\tKuantitas\tHarga");
-          arrTrans[posisi].tampilDataTransaksi();
+          for (int i = 0; i < cnt; i++) {
+            int indeks = sc.simpanIndex[i];
+            arrTrans[indeks].tampilDataTransaksi();
+          }
         }
       } else if (menu == 4) {
       } else if (menu == 5) {

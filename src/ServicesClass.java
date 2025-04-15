@@ -1,6 +1,7 @@
 public class ServicesClass {
   TransaksiPembelian[] Trs = new TransaksiPembelian[5];
-
+  int[] simpanIndex;
+  int count;
   int index;
 
   void tambahDataTransaksi(TransaksiPembelian trp) {
@@ -13,16 +14,17 @@ public class ServicesClass {
   }
 
   int searching(String cari) {
-    int posisi = -1;
-
+    simpanIndex = new int[Trs.length];
+    simpanIndex[0] = -1;
+    count=0;
     for (int i = 0; i < Trs.length; i++) {
       if (Trs[i].brg.nama.equalsIgnoreCase(cari)) {
-        posisi = i;
-        break;
+        simpanIndex[count] = i;
+        count++;
       }
     }
 
-    return posisi;
+    return simpanIndex[0];
   }
 
   void Sorting() {
