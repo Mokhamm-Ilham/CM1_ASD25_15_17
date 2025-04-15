@@ -11,6 +11,13 @@ public class Demo {
     arrBarang[3] = new Barang("Br004", "Rinso Cair", "Sabun", 10, 7000);
     arrBarang[4] = new Barang("Br005", "Mama Lemon Cair", "Sabun", 10, 1000);
 
+    TransaksiPembelian[] arrTrans = new TransaksiPembelian[5];
+    arrTrans[0] = new TransaksiPembelian("Tr001", "Santi", "21-04-2024", 1,arrBarang[0]);
+    arrTrans[1] = new TransaksiPembelian("Tr002", "Vani", "21-04-2024", 2,arrBarang[1]);
+    arrTrans[2] = new TransaksiPembelian("Tr003", "Siska", "21-04-2024", 3,arrBarang[2]);
+    arrTrans[3] = new TransaksiPembelian("Tr004", "MeiMei", "21-04-2024", 1,arrBarang[2]);
+    arrTrans[4] = new TransaksiPembelian("Tr005", "Ihhsan", "21-04-2024", 1,arrBarang[1]);
+
     while (true) {
 
       System.out.println("Pilih menu : ");
@@ -28,6 +35,10 @@ public class Demo {
           arrBarang[i].tampilDataBarang();
         }
       } else if (menu == 2) {
+        System.out.println("Kode Transaksi\tNama Pembeli\tTanggal Pembelian\tNama Barang\tKuantitas\tHarga");
+        for (int i = 0; i < arrTrans.length; i++) {
+          arrTrans[i].tampilDataTransaksi();
+        }
       } else if (menu == 3) {
       } else if (menu == 4) {
       } else if (menu == 5) {
