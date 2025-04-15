@@ -1,7 +1,5 @@
 public class ServicesClass {
   TransaksiPembelian[] Trs = new TransaksiPembelian[5];
-  int[] simpanIndex;
-  int count;
   int index;
 
   void tambahDataTransaksi(TransaksiPembelian trp) {
@@ -14,14 +12,23 @@ public class ServicesClass {
   }
 
   int searching(String cari) {
-    simpanIndex = new int[Trs.length];
+    int[] simpanIndex = new int[Trs.length];
     simpanIndex[0] = -1;
-    count = 0;
+    int count = 0;
     for (int i = 0; i < Trs.length; i++) {
       if (Trs[i].brg.nama.equalsIgnoreCase(cari)) {
         simpanIndex[count] = i;
         count++;
       }
+    }
+    
+    for (int i = 0; i < count; i++) {
+      if (simpanIndex[0] == -1) {
+        System.out.println("Data tidak ditemukan");
+        break;
+      }
+      int indeks = simpanIndex[i];
+      Trs[indeks].tampilDataTransaksi();
     }
 
     return simpanIndex[0];

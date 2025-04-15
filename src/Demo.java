@@ -48,17 +48,8 @@ public class Demo {
       } else if (menu == 3) {
         System.out.print("Masukkan nama barang : ");
         String cari = input.nextLine();
-        int posisi = sc.searching(cari);
-        if (posisi == -1) {
-          System.out.println("Data tidak ditemukan");
-        } else {
-          int cnt = sc.count;
-          System.out.println("Kode Transaksi\tNama Pembeli\tTanggal Pembelian\tNama Barang\tKuantitas\tHarga");
-          for (int i = 0; i < cnt; i++) {
-            int indeks = sc.simpanIndex[i];
-            arrTrans[indeks].tampilDataTransaksi();
-          }
-        }
+        System.out.println("Kode Transaksi\tNama Pembeli\tTanggal Pembelian\tNama Barang\tKuantitas\tHarga");
+        sc.searching(cari);
       } else if (menu == 4) {
         System.out.println("Kode Transaksi\tNama Pembeli\tTanggal Pembelian\tNama Barang\tKuantitas\tHarga");
         sc.Sorting();
