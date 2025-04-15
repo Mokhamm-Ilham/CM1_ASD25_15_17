@@ -4,7 +4,7 @@ public class Demo {
   public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
 
-        Barang[] arrBarang = new Barang[5];
+    Barang[] arrBarang = new Barang[5];
     arrBarang[0] = new Barang("Br001", "Leo Kripik", "Makanan", 10, 1000);
     arrBarang[1] = new Barang("Br002", "You C100 Botol", "Minuman", 10, 7000);
     arrBarang[2] = new Barang("Br003", "Teh Pucuk Botol", "Minuman", 10, 4000);
@@ -23,6 +23,10 @@ public class Demo {
       int menu = input.nextInt();
       input.nextLine();
       if (menu == 1) {
+        System.out.println("Kode\t" + "Nama Barang\t\t    " + "Jenis\t" + "Stok\t" + "Harga Barang");
+        for (int i = 0; i < arrBarang.length; i++) {
+          arrBarang[i].tampilDataBarang();
+        }
       } else if (menu == 2) {
       } else if (menu == 3) {
       } else if (menu == 4) {
