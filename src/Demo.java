@@ -60,6 +60,8 @@ public class Demo {
           }
         }
       } else if (menu == 4) {
+        System.out.println("Kode Transaksi\tNama Pembeli\tTanggal Pembelian\tNama Barang\tKuantitas\tHarga");
+        sc.Sorting();
       } else if (menu == 5) {
         input.close();
         System.exit(0);
