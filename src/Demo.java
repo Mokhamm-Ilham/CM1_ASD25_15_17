@@ -4,6 +4,13 @@ public class Demo {
   public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
 
+        Barang[] arrBarang = new Barang[5];
+    arrBarang[0] = new Barang("Br001", "Leo Kripik", "Makanan", 10, 1000);
+    arrBarang[1] = new Barang("Br002", "You C100 Botol", "Minuman", 10, 7000);
+    arrBarang[2] = new Barang("Br003", "Teh Pucuk Botol", "Minuman", 10, 4000);
+    arrBarang[3] = new Barang("Br004", "Rinso Cair", "Sabun", 10, 7000);
+    arrBarang[4] = new Barang("Br005", "Mama Lemon Cair", "Sabun", 10, 1000);
+
     while (true) {
 
       System.out.println("Pilih menu : ");
