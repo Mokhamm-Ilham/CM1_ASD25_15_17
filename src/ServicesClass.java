@@ -1,19 +1,17 @@
 public class ServicesClass {
- TransaksiPembelian[] Trs;
- int index;
+  Barang[] brng = new Barang[5];
+  TransaksiPembelian[] Trs;
+  int index;
 
- void tambahDataTransaksi(TransaksiPembelian trp) {
+  void tambahDataTransaksi(TransaksiPembelian trp) {
 
- }
+  }
 
- int searching() {
-  return 0;
- }
+  int searching() {
+    return 0;
+  }
 
- void Sorting() {
- }
+  void Sorting() {
 
- void UpdateData() {
- }
-
+  }
 }
